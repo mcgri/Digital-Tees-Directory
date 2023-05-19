@@ -26,8 +26,6 @@ const Page = async ({ params }: Props) => {
     listing.sectors.some((sector) => sector.id === pageData.id)
   );
 
-  console.log(listings);
-
   return (
     <div className="flex flex-col gap-12 py-24">
       <PageHeader title={pageData.name} text={pageData.shortDesc}></PageHeader>

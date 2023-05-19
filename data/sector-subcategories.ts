@@ -27,7 +27,7 @@ export const Subcategories = [
     parent: Sectors.filter((sector) => sector.id === "ui-ux")[0],
   },
   {
-    id: "shopfiy",
+    id: "shopify",
     name: "Shopify",
     parent: Sectors.filter((sector) => sector.id === "web-dev")[0],
   },
