@@ -12,11 +12,11 @@ export default function Page() {
         title="Unlock Teesside's Digital Landscape"
         text="Discover the digital pulse of Teesside with Digital Tees Directory. Find an extensive collection of local digital businesses, ranging from tech solutions to web development and digital marketing. Seamlessly connect and collaborate within Teesside's thriving digital ecosystem. Unleash your digital potential today."
       >
-        <div className="flex items-center gap-6">
-          <a className="dtd-button" href="#">
+        <div className="flex  gap-4 items-stretch md:items-center">
+          <a className="dtd-button pl-5 pr-5 md:pl-8 md:pr-8" href="#">
             Locate digital experts
           </a>
-          <a className="dtd-button" href="#">
+          <a className="dtd-button pl-5 pr-5 md:pl-8 md:pr-8 " href="#">
             List your company
           </a>
         </div>
