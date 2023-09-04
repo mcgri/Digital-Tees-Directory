@@ -10,7 +10,7 @@ export const BusinessTile: React.FC<PropsWithChildren<Props>> = ({
   business,
 }) => {
   return (
-    <div className="grid grid-cols-3 bg-white rounded-md overflow-hidden">
+    <div className="grid grid-cols-1 md:grid-cols-3 bg-white rounded-md overflow-hidden">
       <div
         className="p-6 flex items-center justify-center"
         style={{ backgroundColor: business.background }}
