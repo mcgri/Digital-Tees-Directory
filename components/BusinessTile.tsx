@@ -18,7 +18,7 @@ export const BusinessTile: React.FC<PropsWithChildren<Props>> = ({
         <div className="w-full max-w-xs">{business.logo}</div>
       </div>
       <div className="col-span-2 p-12 flex flex-col gap-6">
-        <h2 className="font-heading text-4xl text-alpha font-bold max-w-2xl leading-[1.2]">
+        <h2 className="font-heading text-2xl md:text-4xl text-alpha font-bold max-w-2xl leading-[1.2]">
           {business.name}
         </h2>
         <p>{business.desc}</p>
