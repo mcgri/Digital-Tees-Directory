@@ -47,6 +47,7 @@ export const BusinessTile: React.FC<PropsWithChildren<Props>> = ({
             <a
               className="[ dtd-button ] text-sm py-3 px-5 gap-3"
               href={business.website}
+              target="_blank"
             >
               <span>Visit Website</span>
               <ArrowRight className="w-6 h-6" />
