@@ -108,7 +108,12 @@ const Page = async ({ params }: Props) => {
                 <BusinessTile business={listing} />
               </Fragment>
             ))}
-            <Paginator previousPage={previousPage} nextPage={nextPage} />
+            <Paginator
+              previousPage={previousPage}
+              nextPage={nextPage}
+              totalPages={listings.length}
+              currentPage={page}
+            />
           </>
         ) : (
           <>No businesses</>
