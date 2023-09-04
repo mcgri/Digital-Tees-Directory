@@ -27,13 +27,16 @@ const Paginator = ({
       >
         <span>Previous</span>
       </Link>
-      {pageNumbers.map((num) => (
-        <Link key={num} href={`${num}`}>
-          <span className={`px-3 ${currentPage === num ? "font-bold" : ""}`}>
-            {num}
-          </span>
-        </Link>
-      ))}
+      <div className="hidden md:flex">
+        {pageNumbers.map((num) => (
+          <Link key={num} href={`${num}`}>
+            <span className={`px-3 ${currentPage === num ? "font-bold" : ""}`}>
+              {num}
+            </span>
+          </Link>
+        ))}
+      </div>
+
       <Link
         href={`${nextPage}`}
         className="dtd-button text-sm py-3 px-5 gap-3 w-full md:w-32 justify-center duration-150 bg-white/90 hover:bg-white/90"
