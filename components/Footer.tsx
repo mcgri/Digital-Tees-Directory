@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <>
       <footer className="bg-bravo w-full min-h-40 ">
-        <Container className="flex pt-10 pb-10 justify-between">
+        <Container className="flex flex-col-reverse lg:flex-row gap-10 pt-10 pb-10 justify-between ">
           <ul className="flex flex-col gap-y-2">
             {Nav.map((item) => (
               <a
@@ -24,9 +24,9 @@ const Footer = () => {
             <p className="text-alpha/60">
               Receive updates on the latest listings and events
             </p>
-            <div className="flex gap-4">
+            <div className="grid md:flex gap-4">
               <input
-                className="bg-white/60 w-96 h-12 rounded-md px-4 "
+                className="bg-white/60 min-w-fit lg:w-96 h-12 rounded-md px-4 "
                 placeholder="Email address"
               />
               <button className="bg-alpha/20 w-32 h-12 rounded-md duration-150 hover:bg-white/60">
