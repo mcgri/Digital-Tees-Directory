@@ -24,7 +24,7 @@ export default function Page() {
 
       <Container className="w-full flex flex-col gap-12">
         <h2 className="font-heading text-5xl text-alpha font-bold max-w-2xl leading-[1.2]">
-          I&apos;m looking for;
+          I&apos;m looking for:
         </h2>
         <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {Sectors.map((sector) => (
