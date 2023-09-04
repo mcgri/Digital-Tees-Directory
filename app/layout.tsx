@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import "./app.css";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Digital Tees Directory",
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body className="text-gray-800 bg-[#F6F4ED]">
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
