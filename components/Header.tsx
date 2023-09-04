@@ -1,14 +1,21 @@
+"use client";
 import Link from "next/link";
 import { Container } from "./Container";
 import { Nav } from "@/data/nav";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 interface Props {}
 
 export const Header: React.FC<Props> = ({}) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <header className="bg-alpha text-white">
-      <Container className="flex items-center justify-between gap-12">
-        <span className="sr-only">Digital Tees Directory</span>
+      <Container className="flex items-center justify-between gap-12 min-h-[95px]">
+        <span className="sr-only ">Digital Tees Directory</span>
         <Link href="/">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -22,8 +29,8 @@ export const Header: React.FC<Props> = ({}) => {
             />
           </svg>
         </Link>
-        <nav>
-          <ul className="flex items-center gap-9">
+        <nav className="">
+          <ul className="hidden lg:flex items-center gap-9">
             {Nav.map((item) => (
               <a
                 className="font-bold py-9 text-white/60 duration-150 | hover:text-bravo"
@@ -35,6 +42,36 @@ export const Header: React.FC<Props> = ({}) => {
             ))}
           </ul>
         </nav>
+        {/* Mobile menu button */}
+        <div className="lg:hidden">
+          <button onClick={toggleMenu}>
+            <Menu className="w-6 h-6" />
+          </button>
+        </div>
+
+        {/* Mobile menu */}
+        {isOpen && (
+          <div className="w-full lg:hidden absolute z-50 top-0 left-0 bg-alpha h-full ">
+            <nav>
+              <div className="float-right p-2">
+                <button onClick={toggleMenu}>
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+              <ul className="flex flex-col items-center  gap-9 pt-4">
+                {Nav.map((item) => (
+                  <a
+                    className="font-bold  text-white/60 duration-150 | hover:text-bravo"
+                    key={item.name}
+                    href={item.url}
+                  >
+                    {item.name}
+                  </a>
+                ))}
+              </ul>
+            </nav>
+          </div>
+        )}
       </Container>
     </header>
   );

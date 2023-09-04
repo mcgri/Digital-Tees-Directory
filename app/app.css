@@ -3,6 +3,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+*{
+  background-color:  rgb(111, 169, 111,0.3)
+}
 
 @layer base {
   html {
