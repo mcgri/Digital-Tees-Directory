@@ -1,5 +1,6 @@
 import { Nav } from "@/data/nav";
 import { Container } from "./Container";
+import NavLinks from "./NavLinks";
 //The footer should include navigation, and a way for users to subscribe to a newsletter (non-functional)
 const Footer = () => {
   return (
@@ -7,15 +8,7 @@ const Footer = () => {
       <footer className="bg-bravo w-full min-h-40 bottom-0 relative">
         <Container className="flex flex-col-reverse lg:flex-row gap-10 pt-10 pb-10 justify-between ">
           <ul className="flex flex-col gap-y-2">
-            {Nav.map((item) => (
-              <a
-                className="font-bold  text-alpha  duration-150  hover:text-alpha/60"
-                key={item.name}
-                href={item.url}
-              >
-                {item.name}
-              </a>
-            ))}
+            <NavLinks isDark={true} />
           </ul>
           <div className="grid">
             <h3 className="font-bold text-alpha">

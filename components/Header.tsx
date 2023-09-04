@@ -4,6 +4,7 @@ import { Container } from "./Container";
 import { Nav } from "@/data/nav";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import NavLinks from "./NavLinks";
 
 interface Props {}
 
@@ -31,15 +32,7 @@ export const Header: React.FC<Props> = ({}) => {
         </Link>
         <nav className="">
           <ul className="hidden lg:flex items-center gap-9">
-            {Nav.map((item) => (
-              <a
-                className="font-bold py-9 text-white/60 duration-150 | hover:text-bravo"
-                key={item.name}
-                href={item.url}
-              >
-                {item.name}
-              </a>
-            ))}
+            <NavLinks />
           </ul>
         </nav>
         {/* Mobile menu button */}
@@ -59,15 +52,7 @@ export const Header: React.FC<Props> = ({}) => {
                 </button>
               </div>
               <ul className="flex flex-col items-center  gap-9 pt-4">
-                {Nav.map((item) => (
-                  <a
-                    className="font-bold  text-white/60 duration-150 | hover:text-bravo"
-                    key={item.name}
-                    href={item.url}
-                  >
-                    {item.name}
-                  </a>
-                ))}
+                <NavLinks />
               </ul>
             </nav>
           </div>
