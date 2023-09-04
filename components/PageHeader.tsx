@@ -13,7 +13,7 @@ export const PageHeader: React.FC<PropsWithChildren<Props>> = ({
 }) => {
   return (
     <Container className="w-full flex flex-col gap-12">
-      <h1 className="font-heading text-6xl text-alpha font-bold max-w-2xl leading-[1.2]">
+      <h1 className="font-heading text-4xl md:text-6xl text-alpha font-bold max-w-2xl leading-[1.2]">
         {title}
       </h1>
       {text && <p className="text-xl max-w-3xl font-medium">{text}</p>}
