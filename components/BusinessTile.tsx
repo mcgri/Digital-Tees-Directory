@@ -23,7 +23,7 @@ export const BusinessTile: React.FC<PropsWithChildren<Props>> = ({
         </h2>
         <p>{business.desc}</p>
         <hr />
-        <div className="flex items-center justify-between gap-6">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex flex-col gap-3">
             {business.tags && (
               <div className="flex items-center gap-3">
