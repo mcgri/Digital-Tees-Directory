@@ -1,7 +1,7 @@
 export const Nav = [
   {
     name: "Business Directory",
-    url: "/business-directory",
+    url: "/business-directory/1",
   },
   {
     name: "Sectors",

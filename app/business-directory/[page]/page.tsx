@@ -5,8 +5,8 @@ import { Businesses } from "@/data/businesses";
 import { Subcategories } from "@/data/sector-subcategories";
 import { Sectors } from "@/data/sectors";
 import { LayoutGrid, LayoutList, Search } from "lucide-react";
-import { Fragment } from "react";
-
+import { Fragment, useState } from "react";
+import Paginator from "@/components/Paginator";
 // Build out the business directory page
 // - Page should include a search, filters( sector and subcategory), and list all businesses in a paginated list.
 // - Each business listed should have the following information;
@@ -15,15 +15,24 @@ import { Fragment } from "react";
 // - Description
 // - Tags
 // - Address
+//non functional paginator component
+export interface Props {
+  params: {
+    page: string;
+  };
+}
 
-export interface Props {}
-
-const Page = async ({}: Props) => {
+const Page = async ({ params }: Props) => {
   const sectors = Sectors;
   const categoryTags = Subcategories;
 
   const listings = [...Businesses, ...Businesses]; // simulate data entries
+  let page = parseInt(params.page) || 1;
 
+  const currentListings = listings; //Todo:  insert pagination logic here
+
+  const previousPage = page > 1 ? page - 1 : 1;
+  const nextPage = page < listings.length ? page + 1 : listings.length;
   return (
     <div className="flex flex-col gap-12 py-24">
       <PageHeader
@@ -94,11 +103,12 @@ const Page = async ({}: Props) => {
 
         {listings.length ? (
           <>
-            {listings.map((listing) => (
+            {currentListings.map((listing) => (
               <Fragment key={listing.id}>
                 <BusinessTile business={listing} />
               </Fragment>
             ))}
+            <Paginator previousPage={previousPage} nextPage={nextPage} />
           </>
         ) : (
           <>No businesses</>
