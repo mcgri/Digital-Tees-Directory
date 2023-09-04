@@ -4,7 +4,7 @@ import { Container } from "./Container";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-bravo w-full min-h-40 ">
+      <footer className="bg-bravo w-full min-h-40 bottom-0 relative">
         <Container className="flex flex-col-reverse lg:flex-row gap-10 pt-10 pb-10 justify-between ">
           <ul className="flex flex-col gap-y-2">
             {Nav.map((item) => (
