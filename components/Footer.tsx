@@ -4,7 +4,7 @@ import { Container } from "./Container";
 const Footer = () => {
   return (
     <>
-      <div className="bg-bravo w-full min-h-40 absolute bottom-0">
+      <footer className="bg-bravo w-full min-h-40 ">
         <Container className="flex pt-10 pb-10 justify-between">
           <ul className="flex flex-col gap-y-2">
             {Nav.map((item) => (
@@ -35,7 +35,7 @@ const Footer = () => {
             </div>
           </div>
         </Container>
-      </div>
+      </footer>
     </>
   );
 };
