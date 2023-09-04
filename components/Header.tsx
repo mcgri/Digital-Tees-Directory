@@ -51,7 +51,7 @@ export const Header: React.FC<Props> = ({}) => {
 
         {/* Mobile menu */}
         {isOpen && (
-          <div className="w-full lg:hidden absolute z-50 top-0 left-0 bg-alpha h-full ">
+          <div className="w-full lg:hidden fixed z-50 top-0 left-0 bg-alpha h-full ">
             <nav>
               <div className="float-right p-2">
                 <button onClick={toggleMenu}>
