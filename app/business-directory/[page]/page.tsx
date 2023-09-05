@@ -41,7 +41,7 @@ const Page = async ({ params }: Props) => {
       ></PageHeader>
       <Container className="w-full flex flex-col gap-6">
         <div className="flex flex-col xl:flex-row justify-between gap-12 bg-bravo p-6 rounded-md">
-          <div className="grid md:flex items-center gap-6 grow">
+          <div className="grid lg:flex items-center gap-6 grow">
             <label htmlFor="subcategory">Search</label>
             <input
               type="text"
@@ -49,8 +49,8 @@ const Page = async ({ params }: Props) => {
               className="grow px-4 py-3 rounded-sm"
             />
           </div>
-          <div className="flex flex-col md:flex-row gap-12 ">
-            <div className="grid md:flex items-center gap-4">
+          <div className="flex flex-col lg:flex-row gap-12 ">
+            <div className="grid lg:flex items-center gap-4">
               <label htmlFor="subcategory">Sector</label>
               <select
                 id="sector"
@@ -67,7 +67,7 @@ const Page = async ({ params }: Props) => {
                 ))}
               </select>
             </div>
-            <div className="grid md:flex items-center gap-4">
+            <div className="grid lg:flex items-center gap-4">
               <label htmlFor="subcategory">Subcategory</label>
               <select
                 id="subcategory"
@@ -84,12 +84,11 @@ const Page = async ({ params }: Props) => {
                 ))}
               </select>
             </div>
+            <button className="dtd-button  bg-white/60 text-sm py-3 px-5 gap-3 w-full md:w-32 justify-center duration-150 hover:bg-white/90">
+              <span>Search</span>
+              <Search className="w-6 h-6" />
+            </button>
           </div>
-
-          <button className="dtd-button  bg-white/60 text-sm py-3 px-5 gap-3 w-full md:w-32 justify-center duration-150 hover:bg-white/90">
-            <span>Search</span>
-            <Search className="w-6 h-6" />
-          </button>
 
           <div className="flex items-center gap-6">
             <button>
