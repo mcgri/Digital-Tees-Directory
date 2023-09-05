@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { Container } from "./Container";
-import { Nav } from "@/data/nav";
+
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import NavLinks from "./NavLinks";

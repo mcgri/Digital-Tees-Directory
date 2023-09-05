@@ -1,4 +1,3 @@
-import { Nav } from "@/data/nav";
 import { Container } from "./Container";
 import NavLinks from "./NavLinks";
 //The footer should include navigation, and a way for users to subscribe to a newsletter (non-functional)
